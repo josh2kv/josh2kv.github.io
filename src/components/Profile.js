@@ -6,22 +6,23 @@ import { BsGeoAlt, BsBuilding } from 'react-icons/bs';
 
 import {
   AiOutlineHome,
-  AiFillHome,
   AiFillGithub,
   AiOutlineMail,
   AiOutlinePhone,
 } from 'react-icons/ai';
 import Download from './Download';
 import { device } from '../css/breakpoints';
+import { useScreenContext } from '../hooks/useScreenContext';
 
 const contactInfo = {
-  homepage: 'https://myportfoliomain48907.gatsbyjs.io',
+  homepage: 'https://josh2kv.github.io',
   github: 'https://github.com/josh2kv',
   email: 'josh2kv@gmail.com',
   phone: '010-4450-2124',
 };
 
 const Profile = () => {
+  const { isLargeView } = useScreenContext();
   const [contact, setContact] = useState('');
 
   return (
@@ -48,59 +49,90 @@ const Profile = () => {
           <span className="text">한국미래에너지</span>
         </div>
       </div>
-      <div className="contact">
-        <div className="icon-group">
-          <a
-            href={contactInfo.homepage}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <AiFillHome
+      {isLargeView ? (
+        <div className="contact">
+          <div className="icon-group">
+            <a
+              href={contactInfo.homepage}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AiOutlineHome
+                onMouseEnter={() => {
+                  setContact('homepage');
+                }}
+                onMouseLeave={() => {
+                  setContact('');
+                }}
+                className="icon"
+              />
+            </a>
+            <a
+              href={contactInfo.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AiFillGithub
+                className="icon"
+                onMouseEnter={() => {
+                  setContact('github');
+                }}
+                onMouseLeave={() => {
+                  setContact('');
+                }}
+              />
+            </a>
+            <AiOutlineMail
+              className="icon"
               onMouseEnter={() => {
-                setContact('homepage');
+                setContact('email');
               }}
               onMouseLeave={() => {
                 setContact('');
               }}
-              className="icon"
             />
+            <AiOutlinePhone
+              className="icon"
+              onMouseEnter={() => {
+                setContact('phone');
+              }}
+              onMouseLeave={() => {
+                setContact('');
+              }}
+            />
+          </div>
+          <div className="details">{contactInfo[contact]}</div>
+        </div>
+      ) : (
+        <div className="contact">
+          <a
+            href={contactInfo.homepage}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="row"
+          >
+            <AiOutlineHome className="icon" />
+            <div className="details">{contactInfo.homepage}</div>
           </a>
           <a
             href={contactInfo.github}
             target="_blank"
             rel="noopener noreferrer"
+            className="row"
           >
-            <AiFillGithub
-              className="icon"
-              onMouseEnter={() => {
-                setContact('github');
-              }}
-              onMouseLeave={() => {
-                setContact('');
-              }}
-            />
+            <AiFillGithub className="icon" />
+            <div className="details">{contactInfo.github}</div>
           </a>
-          <AiOutlineMail
-            className="icon"
-            onMouseEnter={() => {
-              setContact('email');
-            }}
-            onMouseLeave={() => {
-              setContact('');
-            }}
-          />
-          <AiOutlinePhone
-            className="icon"
-            onMouseEnter={() => {
-              setContact('phone');
-            }}
-            onMouseLeave={() => {
-              setContact('');
-            }}
-          />
+          <div href={contactInfo.email} className="row">
+            <AiOutlineMail className="icon" />
+            <div className="details">{contactInfo.email}</div>
+          </div>
+          <div href={contactInfo.phone} className="row">
+            <AiOutlinePhone className="icon" />
+            <div className="details">{contactInfo.phone}</div>
+          </div>
         </div>
-        <div className="details">{contactInfo[contact]}</div>
-      </div>
+      )}
       {/* <Download /> */}
     </Block>
   );
@@ -133,7 +165,7 @@ const Block = styled.div`
         right: -3rem;
         top: -1.5rem;
         bottom: -4rem;
-        border: 1px solid ${themeGet('colors.borderSub')};
+        border: 1px solid ${themeGet('colors.palette.stone5')};
       }
 
       &:after {
@@ -143,7 +175,7 @@ const Block = styled.div`
         right: -1.5rem;
         top: -3rem;
         bottom: -5.5rem;
-        border: 1px solid ${themeGet('colors.borderSub')};
+        border: 1px solid ${themeGet('colors.palette.stone5')};
       }
     }
 
@@ -159,9 +191,9 @@ const Block = styled.div`
     .row {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 1.4rem;
 
-      font-size: ${themeGet('fontSizes.s5')};
+      font-size: ${themeGet('fontSizes.s6')};
 
       &:not(:last-of-type) {
         margin-bottom: 0.4rem;
@@ -170,39 +202,104 @@ const Block = styled.div`
   }
 
   .contact {
-    max-width: 28rem;
-    width: 100%;
-    height: 3rem;
-    margin: 0 auto;
-    margin-bottom: 4rem;
-
-    .icon-group {
+    .row {
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      align-items: center;
+      gap: 1rem;
 
-      font-size: ${themeGet('fontSizes.s7')};
-      margin-bottom: 0.4rem;
-
-      a {
-        line-height: 0;
+      .icon {
+        font-size: ${themeGet('fontSizes.s7')};
       }
 
-      .icon:hover {
-        cursor: pointer;
-        color: ${themeGet('colors.primary')};
+      .details {
+        font-size: ${themeGet('fontSizes.s5')};
       }
-    }
 
-    .details {
-      /* color: ${themeGet('colors.primary')}; */
-      font-weight: ${themeGet('fontWeights.light')};
-      font-size: ${themeGet('fontSizes.s3')};
-      text-align: center;
+      &:not(:last-of-type) {
+        margin-bottom: 0.4rem;
+      }
     }
   }
 
   ${device.large} {
+    .avatar {
+      margin-bottom: 8rem;
+
+      .photo-wrapper {
+        position: relative;
+        width: 20rem;
+
+        .photo {
+          width: 100%;
+          margin: auto;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: -3rem;
+          right: -3rem;
+          top: -1.5rem;
+          bottom: -4rem;
+          border: 1px solid ${themeGet('colors.borderSub')};
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: -1.5rem;
+          right: -1.5rem;
+          top: -3rem;
+          bottom: -5.5rem;
+          border: 1px solid ${themeGet('colors.borderSub')};
+        }
+      }
+
+      .comment {
+        margin-top: 0.7rem;
+        text-align: center;
+      }
+    }
+
+    .status {
+      .row {
+        gap: 2rem;
+        font-size: ${themeGet('fontSizes.s5')};
+      }
+    }
+
+    .contact {
+      max-width: 28rem;
+      width: 100%;
+      height: 3rem;
+      margin: 0 auto;
+      margin-bottom: 4rem;
+
+      .icon-group {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        font-size: ${themeGet('fontSizes.s7')};
+        margin-bottom: 0.4rem;
+
+        a {
+          line-height: 0;
+        }
+
+        .icon:hover {
+          cursor: pointer;
+          color: ${themeGet('colors.primary')};
+        }
+      }
+
+      .details {
+        /* color: ${themeGet('colors.primary')}; */
+        font-weight: ${themeGet('fontWeights.light')};
+        font-size: ${themeGet('fontSizes.s3')};
+        text-align: center;
+      }
+    }
   }
 `;
 

@@ -21,11 +21,7 @@ const TabBar = ({ tabs, selectedTab, handleClickTab }) => {
 
   return (
     <Block>
-      <ProfileModal
-        showModal={showModal}
-        handleCloseModal={handleCloseModal}
-        largeView={isLargeView}
-      />
+      <ProfileModal showModal={showModal} handleCloseModal={handleCloseModal} />
       <div className="tabs">
         {tabs.map(tab => (
           <div
@@ -39,7 +35,6 @@ const TabBar = ({ tabs, selectedTab, handleClickTab }) => {
           </div>
         ))}
       </div>
-
       {!isLargeView && (
         <div className="profile-button" onClick={handleOpenModal}>
           <StaticImage

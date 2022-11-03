@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import themeGet from '@styled-system/theme-get';
+import { AiOutlineClose } from 'react-icons/ai';
 import Modal from 'react-modal';
 import Profile from './Profile';
+import { useScreenContext } from '../hooks/useScreenContext';
 
-const ProfileModal = ({ showModal, handleCloseModal, isLargeView }) => {
+const ProfileModal = ({ showModal, handleCloseModal }) => {
+  const { isLargeView } = useScreenContext();
+
   const customStyle = {
     overlay: {
       position: 'fixed',
@@ -14,6 +18,7 @@ const ProfileModal = ({ showModal, handleCloseModal, isLargeView }) => {
     },
     content: {},
   };
+
   return (
     <Block
       isOpen={showModal && !isLargeView}
@@ -28,40 +33,14 @@ const ProfileModal = ({ showModal, handleCloseModal, isLargeView }) => {
       contentElement={(props, children) => (
         <ModalStyle {...props}>{children}</ModalStyle>
       )}
-      overlayElement={(props, contentElement) => (
-        <OverlayStyle {...props}>{contentElement}</OverlayStyle>
-      )}
     >
+      <AiOutlineClose onClick={handleCloseModal} className="close-btn" />
       <Profile />
     </Block>
   );
 };
 
-const Block = styled(Modal)`
-  /* position: fixed;
-  inset: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99;
-
-  .modal-container {
-    background-color: #fff;
-
-    transform: translateX(105%);
-    transition: ${themeGet('transition.normal')};
-
-    &.ReactModal__Content--after-open {
-      transform: translateX(0%);
-    }
-
-    &.ReactModal__Content--before-close {
-      transform: translateX(105%);
-    }
-
-    .ReactCollapse--collapse {
-      transition: ${themeGet('transition.normal')};
-    }
-  } */
-`;
+const Block = styled(Modal)``;
 
 const ModalStyle = styled.div`
   position: absolute;
@@ -86,13 +65,20 @@ const ModalStyle = styled.div`
   .ReactCollapse--collapse {
     transition: ${themeGet('transition.normal')};
   }
-`;
 
-const OverlayStyle = styled.div`
-  position: fixed;
-  inset: 0px;
-  background-color: rgba(0, 0, 0, 0.55);
-  z-index: 99;
+  .close-btn {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    width: 4rem;
+    height: auto;
+    cursor: pointer;
+    color: ${themeGet('colors.palette.neutral6')};
+
+    &:hover {
+      color: ${themeGet('colors.palette.neutral7')};
+    }
+  }
 `;
 
 export default ProfileModal;

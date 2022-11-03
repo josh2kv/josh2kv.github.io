@@ -8,8 +8,6 @@ import { AiOutlineClose } from 'react-icons/ai';
 import themeGet from '@styled-system/theme-get';
 
 const Gallery = ({ galleryIsOpen, handleCloseGallery, images }) => {
-  const thumbnail = getImage(images[0]);
-  console.log('🚀 ~ thumbnail', thumbnail);
   const customStyle = {
     overlay: {
       display: 'grid',
