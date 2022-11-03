@@ -1,23 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination, Scrollbar } from 'swiper';
 import SectionTitle from '../../components/SectionTitle';
 import Card from './Card';
+import Gallery from './Gallery';
+import { useMyProjects } from '../../hooks/useMyProjects';
 
-import 'swiper/css';
 // import 'swiper/css/bundle';
+import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import DividerH from '../../components/DividerH';
 import Details from './Details';
 
-import { useProjects } from '../../hooks';
-import Gallery from './Gallery';
-
 const Portfolio = () => {
-  const projects = useProjects();
+  const projects = useMyProjects();
   const [selectedProject, setSelectedProject] = useState('orion');
   const [galleryIsOpen, setGalleryIsOpen] = useState(false);
 

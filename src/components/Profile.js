@@ -12,6 +12,7 @@ import {
   AiOutlinePhone,
 } from 'react-icons/ai';
 import Download from './Download';
+import { device } from '../css/breakpoints';
 
 const contactInfo = {
   homepage: 'https://myportfoliomain48907.gatsbyjs.io',
@@ -30,7 +31,7 @@ const Profile = () => {
           <StaticImage
             className="photo"
             layout="fullWidth"
-            alt="profile photo"
+            alt="profile picture for desktop"
             src="../assets/images/etc/my-profile(portfolio).jpg"
             formats={['auto', 'webp']}
           />
@@ -118,7 +119,7 @@ const Block = styled.div`
 
     .photo-wrapper {
       position: relative;
-      width: 24rem;
+      width: 20rem;
 
       .photo {
         width: 100%;
@@ -130,7 +131,7 @@ const Block = styled.div`
         position: absolute;
         left: -3rem;
         right: -3rem;
-        top: -2rem;
+        top: -1.5rem;
         bottom: -4rem;
         border: 1px solid ${themeGet('colors.borderSub')};
       }
@@ -140,8 +141,8 @@ const Block = styled.div`
         position: absolute;
         left: -1.5rem;
         right: -1.5rem;
-        top: -4rem;
-        bottom: -6rem;
+        top: -3rem;
+        bottom: -5.5rem;
         border: 1px solid ${themeGet('colors.borderSub')};
       }
     }
@@ -199,6 +200,9 @@ const Block = styled.div`
       font-size: ${themeGet('fontSizes.s3')};
       text-align: center;
     }
+  }
+
+  ${device.large} {
   }
 `;
 

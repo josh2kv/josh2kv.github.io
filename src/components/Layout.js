@@ -50,12 +50,11 @@ const ContainerWrapper = styled.div`
   display: flex;
 
   main {
-    width: 75%;
+    flex: 1;
   }
 
   aside {
-    width: 25%;
-    border-left: 1px solid ${themeGet('colors.borderSub')};
+    display: none;
   }
 
   margin: auto;
@@ -78,6 +77,12 @@ const ContainerWrapper = styled.div`
   ${device.large} {
     max-width: ${({ width }) => width || `${breakpoints[2]}px`};
     width: 100%;
+
+    aside {
+      display: block;
+      width: 25%;
+      border-left: 1px solid ${themeGet('colors.borderSub')};
+    }
   }
 
   ${device.xlarge} {

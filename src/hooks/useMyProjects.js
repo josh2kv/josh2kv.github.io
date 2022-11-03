@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import themeGet from '@styled-system/theme-get';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { AiOutlineLink } from 'react-icons/ai';
 import theme from '../css/theme';
 
-export const useProjects = () => {
+export const useMyProjects = () => {
   const {
     orion001,
     czi001,
@@ -253,7 +252,9 @@ export const useProjects = () => {
         {
           title: '프로젝트명',
           hasIcon: false,
-          content: ['통합 에너지관리시스템 서비스(EMS)'],
+          content: [
+            '자사 통합 에너지관리시스템 서비스(EMS) 주요 페이지 리뉴얼',
+          ],
         },
         {
           title: '주요기능',

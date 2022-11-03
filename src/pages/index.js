@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import Home from '../containers/Home';
 import AboutMe from '../containers/AboutMe';
 import PortFolio from '../containers/Portfolio';
+import { ScreenProvider } from '../hooks/useScreenContext';
 
 const tabs = [
   {
@@ -30,13 +31,15 @@ const IndexPage = () => {
   };
 
   return (
-    <Layout
-      tabs={tabs}
-      selectedTab={selectedTab}
-      handleClickTab={handleClickTab}
-    >
-      {tabs.find(tab => tab.id === selectedTab).content}
-    </Layout>
+    <ScreenProvider>
+      <Layout
+        tabs={tabs}
+        selectedTab={selectedTab}
+        handleClickTab={handleClickTab}
+      >
+        {tabs.find(tab => tab.id === selectedTab).content}
+      </Layout>
+    </ScreenProvider>
   );
 };
 
