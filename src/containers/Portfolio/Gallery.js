@@ -6,6 +6,8 @@ import { EffectFade, Pagination } from 'swiper';
 import Modal from 'react-modal';
 import { AiOutlineClose } from 'react-icons/ai';
 import themeGet from '@styled-system/theme-get';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
 
 const Gallery = ({ galleryIsOpen, handleCloseGallery, images }) => {
   const customStyle = {
@@ -38,13 +40,18 @@ const Gallery = ({ galleryIsOpen, handleCloseGallery, images }) => {
     >
       <CloseWrapper onClick={handleCloseGallery} />
       <Swiper
+        speed={1}
+        // loop={true}
+        // fadeEffect={{ crossFade: true }}
+        slidesPerView={1}
+        centeredSlides={true}
         grabCursor={true}
         spaceBetween={30}
-        effect={'fade'}
+        // effect={'fade'}
         pagination={{
           clickable: true,
         }}
-        modules={[EffectFade, Pagination]}
+        modules={[Pagination]}
         className="swiper-content"
       >
         {images.map(image => (
@@ -73,10 +80,11 @@ const CloseWrapper = styled(AiOutlineClose)`
 
 const Block = styled(Modal)`
   .swiper-slide {
-    max-width: 160rem;
+    max-width: 90vw;
     width: 100%;
     /* height: 80rem; */
     border-radius: ${themeGet('borderRadius.section')};
+    margin: 0 auto;
   }
 
   .swiper-content {

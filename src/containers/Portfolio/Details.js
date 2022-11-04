@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import themeGet from '@styled-system/theme-get';
 import { AiOutlineCheck } from 'react-icons/ai';
 import SvgGallery from '../../assets/images/svg/icon_gallery.svg';
+import { device } from '../../css/breakpoints';
 
 const Details = ({ details, handleClickGallery }) => {
   return (
@@ -48,7 +49,7 @@ const Block = styled.div`
 
   .detail {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 
     &:not(:last-of-type) {
       margin-bottom: 0.6rem;
@@ -76,6 +77,12 @@ const Block = styled.div`
           color: ${themeGet('colors.primary')};
         }
       }
+    }
+  }
+
+  ${device.large} {
+    .detail {
+      gap: 2rem;
     }
   }
 `;

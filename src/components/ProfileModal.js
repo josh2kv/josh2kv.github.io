@@ -46,8 +46,8 @@ const ModalStyle = styled.div`
   position: absolute;
   color: ${themeGet('colors.textInv')};
   background-color: ${themeGet('colors.palette.neutral2')};
-  padding: 12rem 0;
-  width: 75%;
+  padding: 12rem 5rem;
+  width: min-content;
   height: 100vh;
   right: 0;
   opacity: 1;

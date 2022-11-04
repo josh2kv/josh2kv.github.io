@@ -141,6 +141,8 @@ export const ResetCSS = createGlobalStyle`${css`
     padding: 0;
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
 
   li {
