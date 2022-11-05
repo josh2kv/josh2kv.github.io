@@ -1,38 +1,53 @@
 import React from 'react';
 import styled from 'styled-components';
 import themeGet from '@styled-system/theme-get';
-import SectionTitle from '../../components/SectionTitle';
-import DividerH from '../../components/DividerH';
-import PersonalInfo from './PersonalInfo';
-import HaveDoneList from './HaveDoneList';
-import { aboutMe } from '../../data';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { Mousewheel, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import Summary from './Summary';
+import { device } from '../../css/breakpoints';
+import Experience from './Experience';
 
 const AboutMe = () => {
   return (
-    <Block>
-      <SectionTitle title="summary" />
-      <div className="title">{aboutMe.title}</div>
-      <DividerH />
-      <p className="intro">{aboutMe.intro}</p>
-      <PersonalInfo />
-      <HaveDoneList />
-    </Block>
+    <SwiperWrapper
+      direction={'vertical'}
+      slidesPerView={1}
+      spaceBetween={30}
+      mousewheel={true}
+      pagination={{
+        clickable: true,
+      }}
+      modules={[Mousewheel, Pagination]}
+      className="mySwiper"
+    >
+      <SwiperSlide>
+        <Summary />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Experience />
+      </SwiperSlide>
+    </SwiperWrapper>
   );
 };
 
-const Block = styled.div`
-  margin-right: 3rem;
+const SwiperWrapper = styled(Swiper)`
+  height: 100vh;
 
-  .title {
-    font-size: ${themeGet('fontSizes.s10')};
-    font-weight: ${themeGet('fontWeights.medium')};
-    margin-top: -0.6rem;
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: ${themeGet('colors.palette.yellow1')};
   }
 
-  .intro {
-    font-weight: ${themeGet('fontWeights.light')};
-    margin-top: 3rem;
-    margin-bottom: 4rem;
+  .swiper-pagination-bullet-active {
+    background-color: ${themeGet('colors.primary')};
+  }
+
+  ${device.medium} {
+    height: 73vh;
   }
 `;
 

@@ -29,6 +29,8 @@ export const GlobalStyle = createGlobalStyle`${css`
     letter-spacing: ${themeGet('default.letterSpacing')};
     color: ${themeGet('default.color')};
     font-family: ${themeGet('default.fontFamily')};
+
+    width: 100%;
   }
 
   h1 {

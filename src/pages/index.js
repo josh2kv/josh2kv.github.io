@@ -24,7 +24,7 @@ const tabs = [
 ];
 
 const IndexPage = () => {
-  const [selectedTab, setSelectedTab] = useState('portfolio');
+  const [selectedTab, setSelectedTab] = useState('about-me');
 
   const handleClickTab = tab => {
     setSelectedTab(tab);

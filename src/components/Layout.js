@@ -36,33 +36,34 @@ const Layout = ({ tabs, selectedTab, handleClickTab, children }) => {
 
 const LayoutWrapper = styled.div`
   display: grid;
-  place-items: center;
-
   min-height: 100vh;
-  background: ${themeGet('colors.bgBody')};
 
-  .content {
-    padding: 3.2rem 0 3.2rem 4rem;
-  }
+  background: ${themeGet('colors.bgBody')};
 `;
 
 const ContainerWrapper = styled.div`
   display: flex;
 
+  margin: auto;
+  height: 100vh;
+  overflow: hidden;
+  border: 1px solid ${themeGet('colors.borderSub')};
+  border-radius: ${themeGet('borderRadius.section')};
+  box-shadow: ${themeGet('shadows.section')};
+  background-color: ${themeGet('colors.bgSection')};
+
   main {
     flex: 1;
+
+    .content {
+      padding: 3.2rem 0 3.2rem 4rem;
+      margin: auto;
+    }
   }
 
   aside {
     display: none;
   }
-
-  margin: auto;
-  min-height: 88vh;
-  border: 1px solid ${themeGet('colors.borderSub')};
-  border-radius: ${themeGet('borderRadius.section')};
-  box-shadow: ${themeGet('shadows.section')};
-  background-color: ${themeGet('colors.bgSection')};
 
   ${device.small} {
     max-width: ${({ width }) => width || `${breakpoints[0]}px`};
@@ -72,6 +73,7 @@ const ContainerWrapper = styled.div`
   ${device.medium} {
     max-width: ${({ width }) => width || `${breakpoints[1]}px`};
     width: 100%;
+    height: 88vh;
   }
 
   ${device.large} {

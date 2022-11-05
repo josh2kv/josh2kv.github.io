@@ -48,6 +48,17 @@ const Block = styled.div`
     .icon-checked {
       color: ${themeGet('colors.primary')};
     }
+
+    .keyword {
+      /* border: 1px solid ${themeGet('colors.primary')}; */
+      background-image: linear-gradient(155deg, #fbbf24, #f59e0b);
+      color: ${themeGet('colors.primary')};
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border-radius: 2px;
+      /* padding: 0 4px; */
+      font-weight: ${themeGet('fontWeights.bold')};
+    }
   }
 `;
 export default HaveDoneList;

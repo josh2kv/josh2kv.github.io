@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import themeGet from '@styled-system/theme-get';
 import { aboutMe } from '../../data';
+import { device } from '../../css/breakpoints';
 
 const PersonalInfo = () => {
   return (
@@ -17,7 +18,7 @@ const PersonalInfo = () => {
 };
 
 const Block = styled.ul`
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 
   li {
     display: flex;
@@ -33,6 +34,10 @@ const Block = styled.ul`
     .detail {
       font-weight: ${themeGet('fontWeights.extraLight')};
     }
+  }
+
+  ${device.medium} {
+    margin-bottom: 4rem;
   }
 `;
 export default PersonalInfo;
