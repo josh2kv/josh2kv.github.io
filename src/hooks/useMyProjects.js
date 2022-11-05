@@ -335,7 +335,7 @@ export const useMyProjects = () => {
         {
           title: '작업인원',
           hasIcon: false,
-          content: ['2명(프론트엔드/백엔드)'],
+          content: ['3명(디자인/프론트엔드/백엔드)'],
         },
         {
           title: '업무범위',

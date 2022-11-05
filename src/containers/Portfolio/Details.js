@@ -31,20 +31,11 @@ const Details = ({ details, handleClickGallery }) => {
 };
 
 const Block = styled.div`
-  margin-top: 3rem;
+  margin-top: 1.6rem;
   position: relative;
 
   .icon-gallery {
-    position: absolute;
-    right: 3rem;
-    width: 3rem;
-    height: 3rem;
-    color: ${themeGet('colors.primary')};
-    cursor: pointer;
-
-    &:hover {
-      filter: brightness(1.1);
-    }
+    display: none;
   }
 
   .detail {
@@ -80,9 +71,24 @@ const Block = styled.div`
     }
   }
 
-  ${device.large} {
+  ${device.medium} {
+    margin-top: 3rem;
+
     .detail {
       gap: 2rem;
+    }
+
+    .icon-gallery {
+      position: absolute;
+      right: 3rem;
+      width: 3rem;
+      height: 3rem;
+      color: ${themeGet('colors.primary')};
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(1.1);
+      }
     }
   }
 `;

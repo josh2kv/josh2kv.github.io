@@ -33,7 +33,7 @@ const Profile = () => {
             className="photo"
             layout="fullWidth"
             alt="profile picture for desktop"
-            src="../assets/images/etc/my-profile(portfolio).jpg"
+            src="../assets/images/etc/myprofile-2.jpg"
             formats={['auto', 'webp']}
           />
         </div>

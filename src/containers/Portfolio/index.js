@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import themeGet from '@styled-system/theme-get';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination, Scrollbar } from 'swiper';
 import SectionTitle from '../../components/SectionTitle';
 import Card from './Card';
-import Gallery from './Gallery';
+import GalleryModal from './GalleryModal';
+import SvgGallery from '../../assets/images/svg/icon_gallery.svg';
 import { useMyProjects } from '../../hooks/useMyProjects';
 
 // import 'swiper/css/bundle';
@@ -32,7 +34,7 @@ const Portfolio = () => {
 
   return (
     <Block>
-      <Gallery
+      <GalleryModal
         galleryIsOpen={galleryIsOpen}
         handleCloseGallery={handleCloseGallery}
         images={images}
@@ -60,7 +62,14 @@ const Portfolio = () => {
           </SwiperSlide>
         ))}
       </SwiperWrapper>
-      <DividerH />
+      <div className="divider-wrapper">
+        <DividerH />
+        <SvgGallery
+          className="icon-gallery-in-divider"
+          onClick={handleOpenGallery}
+        />
+      </div>
+
       <Details details={details} handleClickGallery={handleOpenGallery} />
     </Block>
   );
@@ -70,6 +79,25 @@ const Block = styled.div`
   /* width: 100%; */
   /* max-width: 80rem; */
   min-width: 0;
+
+  .divider-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-right: 3rem;
+
+    .icon-gallery-in-divider {
+      width: 3rem;
+      height: 3rem;
+      color: ${themeGet('colors.primary')};
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(1.1);
+      }
+    }
+  }
 `;
 
 const SwiperWrapper = styled(Swiper)`
