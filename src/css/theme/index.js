@@ -7,13 +7,14 @@ const theme = {
       'radial-gradient(66.66% 66.66% at 50% 0%, #32333f 0%, rgba(50, 51, 63, 0) 100% ), linear-gradient(180deg, #05070b 0%, #17171d 100%)',
     bgSection: 'rgba(255, 255, 255, 0.03)',
     overlay: 'rgba(0, 0, 0, 0.4)',
-    primary: palette.amber4,
+    primary: palette.amber6,
     textMain: palette.neutInv.primary,
     textSub: palette.neutInv.secondary,
     textInv: palette.neut.primary,
     textDisabled: 'rgba(255, 255, 255, 0.8)',
     borderMain: palette.zinc8,
     borderSub: '#32333F',
+    textAccent: `linear-gradient(to bottom, ${palette.amber3}, ${palette.amber6})`,
   },
 
   fontSizes: {

@@ -18,7 +18,7 @@ export const palette = {
     // primary: 'rgba(255, 255, 255, .85)',
     primary: 'rgba(255, 255, 255, .95)',
     // secondary: 'rgba(255, 255, 255, .45)',
-    secondary: 'rgba(255, 255, 255, .5)',
+    secondary: 'rgba(255, 255, 255, .6)',
     disabled: 'rgba(255, 255, 255, .3)',
     border: 'rgba(255, 255, 255, .2)',
     divider: 'rgba(255, 255, 255, .12)',

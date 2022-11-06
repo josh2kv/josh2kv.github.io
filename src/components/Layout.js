@@ -55,9 +55,14 @@ const ContainerWrapper = styled.div`
   main {
     flex: 1;
 
+    display: flex;
+    flex-direction: column;
+
     .content {
+      flex: 1;
+
       padding: 3.2rem 0 3.2rem 4rem;
-      margin: auto;
+      overflow: hidden;
     }
   }
 

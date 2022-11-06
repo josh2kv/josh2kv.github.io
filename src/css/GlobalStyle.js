@@ -4,7 +4,8 @@ import { device } from './breakpoints.js';
 
 export const GlobalStyle = createGlobalStyle`${css`
   ::selection {
-    background: ${themeGet('colors.primary')};
+    /* background: ${themeGet('colors.primary')}; */
+    background: ${themeGet('colors.palette.amber6')};
     color: #ffffff;
   }
 

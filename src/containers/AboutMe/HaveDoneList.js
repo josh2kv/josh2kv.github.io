@@ -51,7 +51,7 @@ const Block = styled.div`
 
     .keyword {
       /* border: 1px solid ${themeGet('colors.primary')}; */
-      background-image: linear-gradient(120deg, #facc15, #fb923c);
+      background-image: ${themeGet('colors.textAccent')};
       color: ${themeGet('colors.primary')};
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

@@ -1,0 +1,34 @@
+<svg viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <mask id="mask0_114_284" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="450" height="450">
+    <ellipse rx="224.946" ry="224.98" transform="matrix(1 -8.67246e-05 0.000243578 1 225.001 225)"
+      fill="url(#paint0_linear_114_284)" />
+  </mask>
+  <g mask="url(#mask0_114_284)">
+    <text transform="matrix(0.909485 -0.415737 0.415632 0.909533 -77.9805 106.074)" fill="#32333F" xml:space="preserve"
+      style="white-space: pre" font-family="Inter" font-size="24" letter-spacing="0em">
+      <tspan x="0" y="23.2273">var runtime=function(t){&#34;use strict&#34;;var </tspan>
+      <tspan x="0" y="52.2273">r,e=Object.prototype,n=e.hasOwnProperty,o=&#34;fun</tspan>
+      <tspan x="0" y="81.2273">ction&#34;==typeof Symbol?Symbol:</tspan>
+      <tspan x="0" y="110.227">{},i=o.iterator||&#34;@@iterator&#34;,a=o.asyncIterator||&#34;@</tspan>
+      <tspan x="0" y="139.227">@asyncIterator&#34;,c=o.toStringTag||&#34;@@toStringTag</tspan>
+      <tspan x="0" y="168.227">&#34;;function u(t,r,e){return Object.defineProperty(t,r,</tspan>
+      <tspan x="0" y="197.227">{value:e,enumerable:!0,configurable:!0,writable:!</tspan>
+      <tspan x="0" y="226.227">0}),t[r]}try{u({},&#34;&#34;)}catch(t){u=function(t,r,e){return </tspan>
+      <tspan x="0" y="255.227">t[r]=e}}function h(t,r,e,n){var o=r&#38;&#38;r.prototype </tspan>
+      <tspan x="0" y="284.227">instanceof g?</tspan>
+      <tspan x="0" y="313.227">r:g,i=Object.create(o.prototype),a=new G(n||</tspan>
+      <tspan x="0" y="342.227">[]);return i._invoke=function(t,r,e){var n=l;return </tspan>
+      <tspan x="0" y="371.227">function(o,i){if(n===p)throw new Error(&#34;Generator </tspan>
+      <tspan x="0" y="400.227">is already running&#34;);if(n===y)</tspan>
+      <tspan x="0" y="429.227">{if(&#34;throw&#34;===o)throw i;return T()}</tspan>
+      <tspan x="0" y="458.227">for(e.method=o,e.arg=i;;){var a=e.delegate;if(a)</tspan>
+    </text>
+  </g>
+  <defs>
+    <linearGradient id="paint0_linear_114_284" x1="1.57657e-05" y1="-0.0653898" x2="449.961" y2="449.957"
+      gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFC53D" />
+      <stop offset="1" stop-color="#F7DF1E" />
+    </linearGradient>
+  </defs>
+</svg>
