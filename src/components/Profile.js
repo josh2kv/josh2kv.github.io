@@ -3,7 +3,6 @@ import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import themeGet from '@styled-system/theme-get';
 import { BsGeoAlt, BsBuilding } from 'react-icons/bs';
-
 import {
   AiOutlineHome,
   AiFillGithub,
@@ -12,6 +11,7 @@ import {
 } from 'react-icons/ai';
 import Download from './Download';
 import { device } from '../css/breakpoints';
+import SvgDotsSquare from '../assets/images/svg/dots-square.svg';
 import { useScreenContext } from '../hooks/useScreenContext';
 
 const contactInfo = {
@@ -29,6 +29,8 @@ const Profile = () => {
     <Block>
       <div className="avatar">
         <div className="photo-wrapper">
+          <SvgDotsSquare className="dots-square left" />
+          <SvgDotsSquare className="dots-square right" />
           <StaticImage
             className="photo"
             layout="fullWidth"
@@ -153,34 +155,36 @@ const Block = styled.div`
       position: relative;
       width: 20rem;
 
-      /* overflow: hidden; */
-
       .photo {
         width: 100%;
         margin: auto;
-        border-radius: ${themeGet('borderRadius.small')};
+      }
+
+      .dots-square {
+        position: absolute;
+        width: 4.6rem;
+        height: auto;
+
+        &.left {
+          top: -2rem;
+          left: -2rem;
+        }
+
+        &.right {
+          bottom: 20%;
+          right: -2rem;
+        }
       }
 
       &:before {
         content: '';
         position: absolute;
-        left: -3rem;
-        right: -3rem;
-        top: -1.5rem;
-        bottom: -4rem;
-        border: 1px solid ${themeGet('colors.palette.stone5')};
-        border-radius: ${themeGet('borderRadius.small')};
-      }
-
-      &:after {
-        content: '';
-        position: absolute;
-        left: -1.5rem;
-        right: -1.5rem;
-        top: -3rem;
-        bottom: -5.5rem;
-        border: 1px solid ${themeGet('colors.palette.stone5')};
-        border-radius: ${themeGet('borderRadius.small')};
+        left: 1rem;
+        right: -1rem;
+        top: 1rem;
+        bottom: -1rem;
+        border: 1px solid ${themeGet('colors.primary')};
+        opacity: 0.5;
       }
     }
 
@@ -239,24 +243,31 @@ const Block = styled.div`
           margin: auto;
         }
 
+        .dots-square {
+          position: absolute;
+          width: 4.6rem;
+          height: auto;
+
+          &.left {
+            top: -2rem;
+            left: -2rem;
+          }
+
+          &.right {
+            bottom: 20%;
+            right: -2rem;
+          }
+        }
+
         &:before {
           content: '';
           position: absolute;
-          left: -3rem;
-          right: -3rem;
-          top: -1.5rem;
-          bottom: -4rem;
-          border: 1px solid ${themeGet('colors.borderSub')};
-        }
-
-        &:after {
-          content: '';
-          position: absolute;
-          left: -1.5rem;
-          right: -1.5rem;
-          top: -3rem;
-          bottom: -5.5rem;
-          border: 1px solid ${themeGet('colors.borderSub')};
+          left: 1rem;
+          right: -1rem;
+          top: 1rem;
+          bottom: -1rem;
+          border: 1px solid ${themeGet('colors.primary')};
+          opacity: 0.5;
         }
       }
 

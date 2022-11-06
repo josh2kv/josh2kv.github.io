@@ -72,7 +72,7 @@ const Block = styled.div`
   }
 
   ${device.medium} {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
 
     .detail {
       gap: 2rem;

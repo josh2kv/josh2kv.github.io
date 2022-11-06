@@ -45,7 +45,7 @@ const Block = styled(Modal)``;
 const ModalStyle = styled.div`
   position: absolute;
   color: ${themeGet('colors.textInv')};
-  background-color: ${themeGet('colors.palette.neutral2')};
+  background-color: ${themeGet('colors.palette.neutral1yarn ')};
   padding: 12rem 5rem;
   width: min-content;
   height: 100vh;
