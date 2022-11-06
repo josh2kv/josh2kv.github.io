@@ -41,7 +41,7 @@ const TabBar = ({ tabs, selectedTab, handleClickTab }) => {
             className="profile-pic"
             layout="fullWidth"
             alt="profile picture for mobile"
-            src="../assets/images/etc/my-profile(portfolio).jpg"
+            src="../assets/images/etc/my-profile.jpg"
             formats={['auto', 'webp']}
           />
         </div>

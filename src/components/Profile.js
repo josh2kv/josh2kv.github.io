@@ -33,11 +33,11 @@ const Profile = () => {
             className="photo"
             layout="fullWidth"
             alt="profile picture for desktop"
-            src="../assets/images/etc/myprofile-2.jpg"
+            src="../assets/images/etc/my-profile.jpg"
             formats={['auto', 'webp']}
           />
         </div>
-        <p className="comment">늦깍이 개발자</p>
+        {/* <p className="comment">성장과 성과</p> */}
       </div>
       <div className="status">
         <div className="row">
@@ -153,9 +153,12 @@ const Block = styled.div`
       position: relative;
       width: 20rem;
 
+      /* overflow: hidden; */
+
       .photo {
         width: 100%;
         margin: auto;
+        border-radius: ${themeGet('borderRadius.small')};
       }
 
       &:before {
@@ -166,6 +169,7 @@ const Block = styled.div`
         top: -1.5rem;
         bottom: -4rem;
         border: 1px solid ${themeGet('colors.palette.stone5')};
+        border-radius: ${themeGet('borderRadius.small')};
       }
 
       &:after {
@@ -176,6 +180,7 @@ const Block = styled.div`
         top: -3rem;
         bottom: -5.5rem;
         border: 1px solid ${themeGet('colors.palette.stone5')};
+        border-radius: ${themeGet('borderRadius.small')};
       }
     }
 
