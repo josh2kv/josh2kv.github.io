@@ -17,7 +17,7 @@ const TabBar = ({ tabs, selectedTab, handleClickTab }) => {
     setShowModal(false);
   };
 
-  if (isLargeView === null) return;
+  // if (isLargeView === null) return;
 
   return (
     <Block>
