@@ -1,0 +1,119 @@
+<svg viewBox="0 0 540 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g filter="url(#filter0_d_140_576)">
+    <mask id="mask0_140_576" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="125" y="-100" width="500"
+      height="286">
+      <rect width="287.286" height="287.286" transform="matrix(0.868115 -0.496364 0.868115 0.496364 125.876 42.5981)"
+        fill="#D9D9D9" />
+    </mask>
+    <g mask="url(#mask0_140_576)">
+      <text transform="matrix(0.868115 -0.496364 0.868014 0.496421 126.421 42.8575)" fill="#32333F" xml:space="preserve"
+        style="white-space: pre" font-family="Inter" font-size="20" letter-spacing="0em">
+        <tspan x="0" y="19.2727">var runtime=function(t){&#34;use </tspan>
+        <tspan x="0" y="43.2727">strict&#34;;var </tspan>
+        <tspan x="0" y="67.2727">r,e=Object.prototype,n=e.hasOwn</tspan>
+        <tspan x="0" y="91.2727">Property,o=&#34;function&#34;==typeof </tspan>
+        <tspan x="0" y="115.273">Symbol?Symbol:</tspan>
+        <tspan x="0" y="139.273">{},i=o.iterator||&#34;@@iterator&#34;,a=o.as</tspan>
+        <tspan x="0" y="163.273">yncIterator||&#34;@@asyncIterator&#34;,c=</tspan>
+        <tspan x="0" y="187.273">o.toStringTag||&#34;@@toStringTag&#34;;fu</tspan>
+        <tspan x="0" y="211.273">nction u(t,r,e){return </tspan>
+        <tspan x="0" y="235.273">Object.defineProperty(t,r,</tspan>
+        <tspan x="0" y="259.273">{value:e,enumerable:!</tspan>
+        <tspan x="0" y="283.273">0,configurable:!0,writable:!0}),t[r]}</tspan>
+        <tspan x="0" y="307.273">try{u({},&#34;&#34;)}catch(t)</tspan>
+        <tspan x="0" y="331.273">{u=function(t,r,e){return t[r]=e}}</tspan>
+        <tspan x="0" y="355.273">function h(t,r,e,n){var </tspan>
+        <tspan x="0" y="379.273">o=r&#38;&#38;r.prototype instanceof g?</tspan>
+        <tspan x="0" y="403.273">r:g,i=Object.create(o.prototype),a=</tspan>
+        <tspan x="0" y="427.273">new G(n||[]);return </tspan>
+        <tspan x="0" y="451.273">i._invoke=function(t,r,e){var </tspan>
+        <tspan x="0" y="475.273">n=l;return function(o,i)</tspan>
+        <tspan x="0" y="499.273">{if(n===p)throw new </tspan>
+        <tspan x="0" y="523.273">Error(&#34;Generator is already </tspan>
+        <tspan x="0" y="547.273">running&#34;);if(n===y)</tspan>
+        <tspan x="0" y="571.273">{if(&#34;throw&#34;===o)throw i;return T()}</tspan>
+        <tspan x="0" y="595.273">for(e.method=o,e.arg=i;;){var </tspan>
+        <tspan x="0" y="619.273">a=e.delegate;if(a){var c=j(a,e);if(c)</tspan>
+        <tspan x="0" y="643.273">{if(c===v)continue;return c}}i</tspan>
+      </text>
+    </g>
+    <mask id="mask1_140_576" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="124" y="50" width="251" height="428">
+      <rect width="286.252" height="286.252" transform="matrix(0.871211 0.498221 3.78561e-05 0.996377 124.688 50.0093)"
+        fill="#D9D9D9" />
+    </mask>
+    <g mask="url(#mask1_140_576)">
+      <text transform="matrix(0.871211 0.498221 -6.29553e-05 0.996319 125.217 53.7344)" fill="#32333F"
+        xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="20" letter-spacing="0em">
+        <tspan x="0" y="19.2727">l=&#34;suspendedStart&#34;,s=&#34;suspendedYield&#34;,</tspan>
+        <tspan x="0" y="43.2727">p=&#34;executing&#34;,y=&#34;completed&#34;,v={};funct</tspan>
+        <tspan x="0" y="67.2727">ion g(){}function d(){}function m(){}var </tspan>
+        <tspan x="0" y="91.2727">w={};u(w,i,function(){return this});var </tspan>
+        <tspan x="0" y="115.273">L=Object.getPrototypeOf,x=L&#38;&#38;L(L(N([])</tspan>
+        <tspan x="0" y="139.273">));x&#38;&#38;x!==e&#38;&#38;n.call(x,i)&#38;&#38;(w=x);var </tspan>
+        <tspan x="0" y="163.273">b=m.prototype=g.prototype=Object.crea</tspan>
+        <tspan x="0" y="187.273">te(w);function E(t)</tspan>
+        <tspan x="0" y="211.273">{[&#34;next&#34;,&#34;throw&#34;,&#34;return&#34;].forEach(functio</tspan>
+        <tspan x="0" y="235.273">n(r){u(t,r,function(t){return </tspan>
+        <tspan x="0" y="259.273">this._invoke(r,t)})})}function _(t,r){var </tspan>
+        <tspan x="0" y="283.273">e;this._invoke=function(o,i){function a()</tspan>
+        <tspan x="0" y="307.273">{return new r(function(e,a){!function </tspan>
+        <tspan x="0" y="331.273">e(o,i,a,c){var u=f(t[o],t,i);if(&#34;throw&#34;!</tspan>
+        <tspan x="0" y="355.273">==u.type){var h=u.arg,l=h.value;return </tspan>
+        <tspan x="0" y="379.273">l&#38;&#38;&#34;object&#34;==typeof </tspan>
+        <tspan x="0" y="403.273">l&#38;&#38;n.call(l,&#34;__await&#34;)?</tspan>
+        <tspan x="0" y="427.273">r.resolve(l.__await).then(function(t)</tspan>
+        <tspan x="0" y="451.273">{e(&#34;next&#34;,t,a,c)},function(t)</tspan>
+        <tspan x="0" y="475.273">{e(&#34;throw&#34;,t,a,c)}):r.resolve(l).then(functio</tspan>
+        <tspan x="0" y="499.273">n(t){h.value=t,a(h)},function(t){return </tspan>
+        <tspan x="0" y="523.273">e(&#34;throw&#34;,t,a,c)})}c(u.arg)}(o,i,e,a)})}</tspan>
+        <tspan x="0" y="547.273">return e=e?e.then(a,a):a()}}function j(t,e)</tspan>
+        <tspan x="0" y="571.273">{var n=t.iterator[e.method];if(n===r)</tspan>
+        <tspan x="0" y="595.273">{if(e.delegate=null,&#34;throw&#34;===e.method)</tspan>
+      </text>
+    </g>
+    <mask id="mask2_140_576" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="384" y="47" width="251" height="431">
+      <rect width="286.245" height="286.245" transform="matrix(0.868071 -0.503621 0.00625367 0.996384 384.446 191.997)"
+        fill="#D9D9D9" />
+    </mask>
+    <g mask="url(#mask2_140_576)">
+      <text transform="matrix(0.868071 -0.503621 0.00615319 0.996442 375.309 173.961)" fill="#32333F"
+        xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="20" letter-spacing="0em">
+        <tspan x="0" y="19.2727">n=y,e.arg;e.dispatchException(e.arg)}&#34;return&#34;==</tspan>
+        <tspan x="0" y="43.2727">=e.method&#38;&#38;e.abrupt(&#34;return&#34;,e.arg);n=p;var </tspan>
+        <tspan x="0" y="67.2727">u=f(t,r,e);if(&#34;normal&#34;===u.type){if(n=e.done?</tspan>
+        <tspan x="0" y="91.2727">y:s,u.arg===v)continue;return{value:u.arg,done:</tspan>
+        <tspan x="0" y="115.273">e.done}}&#34;throw&#34;===u.type&#38;&#38;(n=y,e.method=&#34;th</tspan>
+        <tspan x="0" y="139.273">row&#34;,e.arg=u.arg)}}}(t,e,a),i}function f(t,r,e)</tspan>
+        <tspan x="0" y="163.273">{try{return{type:&#34;normal&#34;,arg:t.call(r,e)}}catch(t)</tspan>
+        <tspan x="0" y="187.273">{return{type:&#34;throw&#34;,arg:t}}}t.wrap=h;var </tspan>
+        <tspan x="0" y="211.273">l=&#34;suspendedStart&#34;,s=&#34;suspendedYield&#34;,p=&#34;exe</tspan>
+        <tspan x="0" y="235.273">cuting&#34;,y=&#34;completed&#34;,v={};function g(){}</tspan>
+        <tspan x="0" y="259.273">function d(){}function m(){}var </tspan>
+        <tspan x="0" y="283.273">w={};u(w,i,function(){return this});var </tspan>
+        <tspan x="0" y="307.273">L=Object.getPrototypeOf,x=L&#38;&#38;L(L(N([])));x&#38;&#38;x</tspan>
+        <tspan x="0" y="331.273">!==e&#38;&#38;n.call(x,i)&#38;&#38;(w=x);var </tspan>
+        <tspan x="0" y="355.273">b=m.prototype=g.prototype=Object.create(w);f</tspan>
+        <tspan x="0" y="379.273">unction E(t)</tspan>
+        <tspan x="0" y="403.273">{[&#34;next&#34;,&#34;throw&#34;,&#34;return&#34;].forEach(function(r)</tspan>
+        <tspan x="0" y="427.273">{u(t,r,function(t){return this._invoke(r,t)})})}</tspan>
+        <tspan x="0" y="451.273">function _(t,r){var e;this._invoke=function(o,i)</tspan>
+        <tspan x="0" y="475.273">{function a(){return new r(function(e,a){!</tspan>
+        <tspan x="0" y="499.273">function e(o,i,a,c){var </tspan>
+      </text>
+    </g>
+  </g>
+  <defs>
+    <filter id="filter0_d_140_576" x="121.724" y="-100" width="516.993" height="585.841" filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        result="hardAlpha" />
+      <feOffset dy="4" />
+      <feGaussianBlur stdDeviation="2" />
+      <feComposite in2="hardAlpha" operator="out" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_140_576" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_140_576" result="shape" />
+    </filter>
+  </defs>
+</svg>

@@ -25,7 +25,7 @@ const Experience = () => {
         </div>
       </div>
       <div className="section">
-        <SectionTitle title="etc" />
+        <SectionTitle title="Additional Information" />
         <ul>
           {aboutMe.etc.map(el => (
             <li>{el}</li>
