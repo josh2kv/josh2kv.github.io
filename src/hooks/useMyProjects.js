@@ -297,7 +297,7 @@ export const useMyProjects = () => {
           title: '업무상세',
           hasIcon: true,
           content: [
-            '핵심 페이지 리뉴얼 프로젝트의 기획 및 프론트엔드 개발 및 유지보수',
+            '핵심 페이지 리뉴얼 프로젝트의 기획, 프론트엔드 개발 및 유지보수',
             'Vanilla JavaScript로 일부 CSR',
             'Chart Library를 이용한 데이터 시각화',
             'SVG를 이용한 효과 애니메이션 구현',

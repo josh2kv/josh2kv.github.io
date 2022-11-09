@@ -22,9 +22,9 @@ const Home = () => {
       <div className="sub-headings-wrapper">
         <div className="sub-heading">
           <h2>
-            <MdFormatQuote className="quote-start" />
+            <MdFormatQuote className="quote-start md-none" />
             스스로 학습하고 성장할 수 있는 능력이 있습니다.
-            <MdFormatQuote className="quote-end" />
+            <MdFormatQuote className="quote-end md-none" />
           </h2>
           <p>
             비전공자이지만 줄곧 책과 온라인 강의로 웹개발을 독학했습니다.{' '}
@@ -37,9 +37,9 @@ const Home = () => {
         </div>
         <div className="sub-heading">
           <h2>
-            <MdFormatQuote className="quote-start" /> 완성도 높은 결과물을 위해
-            자기주도적으로 일합니다.
-            <MdFormatQuote className="quote-end" />
+            <MdFormatQuote className="quote-start md-none" /> 완성도 높은
+            결과물을 위해 자기주도적으로 일합니다.
+            <MdFormatQuote className="quote-end md-none" />
           </h2>
           <p>
             누가 시키지 않아도 더 나은 프로젝트를 위해 필요한 것들을 스스로
@@ -47,7 +47,7 @@ const Home = () => {
             이러한 모습을 인정받아 현재 회사에서 프론트엔드쪽을 개발과 그에
             필요한 모든 결정을 일임받았습니다. <br className="md-hide" />
             이는 팀 내 긍정적인 효과와 성과로 이어져 그 해 연봉협상에서 기존
-            연봉의 125%이상 인상받았습니다.
+            연봉대비 25%이상 인상받았습니다.
           </p>
         </div>
       </div>
